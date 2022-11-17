@@ -9,8 +9,15 @@ let team = [
     {name: 'Barbara Ramos',ruolo: 'Graphic Designer',foto: "barbara-ramos-graphic-designer.jpg" }
 
     ];
-    team.forEach((element) => {
-    console.log(`
-    nome: ${element.name} ruolo: ${element.ruolo} foto: ${element.foto}
-    `);
-    }); 
+
+    for (element of team) {
+        console.log(`
+    nome: ${element.name} ruolo: ${element.ruolo} foto: ${element.foto}`);
+
+    document.getElementById("teams").innerHTML += `<p> nome: ${element.name} </p>
+     <p>ruolo: ${element.ruolo}</p>
+      <p class="mb-5"> foto: ${element.foto} </p>`
+
+};
+    
+    
